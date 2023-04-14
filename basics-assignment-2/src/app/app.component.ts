@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'basics-assignment-2';
+  username: string = '';
+
+  resetUsername(): void {
+    this.username = '';
+  }
+
 }
