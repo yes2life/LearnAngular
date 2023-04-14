@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-servers',
@@ -12,7 +13,8 @@ import { Component } from '@angular/core';
 })
 export class ServersComponent {
   allowNewServer = false;
-  serverCreationStatus = 'No server was created.'
+  serverCreationStatus = 'No server was created.';
+  serverName = '';
 
   constructor() {
     setTimeout(() => {
@@ -31,5 +33,14 @@ export class ServersComponent {
   onCreateServer(element: any) {
     this.serverCreationStatus = 'Server was created.';
     console.dir(element);  
+  }
+
+  onUpdateServerName(event: any){
+    // console.log(event);
+    this.serverName = (<HTMLInputElement>event.target).value;
+    
+    // this works too.
+    
+    this.serverName = event.target.value;
   }
 }
