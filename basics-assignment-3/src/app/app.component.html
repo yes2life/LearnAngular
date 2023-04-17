@@ -3,7 +3,7 @@
 	<p *ngIf="showSecret">Secret Password = tuna</p>
 	<!-- <div *ngFor='let logThing of arrayLogMessages'>{{logThing}}</div> -->
 	<div 
-		*ngFor='let logThing of arrayLogMessages'
-		[ngStyle]="{backgroundColor: logThing >= 5? 'blue' : 'transparent'}"
-		[ngClass]="{myColor: logThing >= 5}"	
+		*ngFor='let logThing of arrayLogMessages; let i = index'
+		[ngStyle]="{backgroundColor: i >= 4? 'blue' : 'transparent'}"
+		[ngClass]="{myColor: i >= 4}"	
 	>{{logThing}}</div>

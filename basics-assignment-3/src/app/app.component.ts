@@ -14,7 +14,7 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'basics-assignment-3';
-  arrayLogMessages: number[] = [];
+  arrayLogMessages: Date[] = [];
   logItem: number = 0;
   showSecret: boolean = true;
   paragraphText: string = '';
@@ -31,10 +31,11 @@ export class AppComponent {
   }
 
   logButtonClicks(){
-    // increment logItem by 1
-    this.logItem++;
+    // // increment logItem by 1
+    // this.logItem++;
+    
     // add info to logging array
-    this.arrayLogMessages.push(this.logItem);
+    this.arrayLogMessages.push(new Date());
     // output log
     console.log('Button cliked ' + this.logItem + ' time(s). Array log: ' + this.arrayLogMessages );
   }
