@@ -1,5 +1,8 @@
-<button (click)="logButtonClicks()">Display Details</button>
-<p *ngIf="paragraphIsBlank; else paragraphWithMessage"></p>
-<ng-template #paragraphWithMessage>
-	<p [ngStyle]="{}">{{paragraphText}}</p>
+<button (click)="toggleParagraphDisplay()">Display Details</button>
+<p  *ngIf="logItem < 5; else paragraphWithFormatting">{{paragraphText}}</p>
+<ng-template #paragraphWithFormatting>
+	<p 	
+		[ngStyle]="{backgroundColor: bgColor}"
+		[ngClass]="{myColor: textColor}">{{paragraphText}} </p>
 </ng-template>
+<p>{{logItem}}</p>
