@@ -3,11 +3,13 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styles: [`
-        .myColor {
-          color: white;
-        }
-    `]
+  styles: [
+      `
+          .myColor {
+            color: white;
+          }
+      `
+    ]
 })
 
 export class AppComponent {
