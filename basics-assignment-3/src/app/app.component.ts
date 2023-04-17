@@ -7,31 +7,24 @@ import { Component } from '@angular/core';
         .myColor {
           color: white;
         }
-        /* label {
-          display: block;
-          text-align: left;
-        } */
     `]
 })
 
 export class AppComponent {
   title = 'basics-assignment-3';
-  arrayLogMessages: string[] = [];
+  arrayLogMessages: number[] = [];
   logItem: number = 0;
-  paragraphIsBlank: boolean = false;
+  showSecret: boolean = true;
   paragraphText: string = '';
   textColor: string = 'white';
-  bgColor: string = 'blue';
-
-  constructor() {
-    this.paragraphText = 'Secret Password = tuna';
-    this.logItem = 0;
-  }
+  // bgColor: string = 'blue';
 
   toggleParagraphDisplay(){
 
     // toggle paragraph: if blank, set to 'Secret Password = tuna'; otherwise, clear
     this.paragraphText = this.paragraphText ? '' : 'Secret Password = tuna';
+
+    this.showSecret = !this.paragraphText;
     this.logButtonClicks();
   }
 
@@ -39,7 +32,7 @@ export class AppComponent {
     // increment logItem by 1
     this.logItem++;
     // add info to logging array
-    this.arrayLogMessages.push(this.logItem.toString());
+    this.arrayLogMessages.push(this.logItem);
     // output log
     console.log('Button cliked ' + this.logItem + ' time(s). Array log: ' + this.arrayLogMessages );
   }

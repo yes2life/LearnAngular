@@ -1,12 +1,9 @@
-<button (click)="toggleParagraphDisplay()">Display Details</button>
-<div  *ngIf="logItem < 5; else paragraphWithFormatting">
-	<p>{{paragraphText}}</p>
-	<p>{{arrayLogMessages.toString()}} </p>
-</div>
+<button class='btn btn-primary' (click)="toggleParagraphDisplay()">Display Details</button>
 
-<ng-template #paragraphWithFormatting>
-	<p>{{paragraphText}}</p>
-	<p 	
-		[ngStyle]="{backgroundColor: bgColor}"
-		[ngClass]="{myColor: logItem >= 5}">{{arrayLogMessages.toString()}} </p>
-</ng-template>
+	<p *ngIf="showSecret">Secret Password = tuna</p>
+	<!-- <div *ngFor='let logThing of arrayLogMessages'>{{logThing}}</div> -->
+	<div 
+		*ngFor='let logThing of arrayLogMessages'
+		[ngStyle]="{backgroundColor: logThing >= 5? 'blue' : 'transparent'}"
+		[ngClass]="{myColor: logThing >= 5}"	
+	>{{logThing}}</div>
