@@ -1,0 +1,5 @@
+<button (click)="logButtonClicks()">Display Details</button>
+<p *ngIf="paragraphIsBlank; else paragraphWithMessage"></p>
+<ng-template #paragraphWithMessage>
+	<p [ngStyle]="{}">{{paragraphText}}</p>
+</ng-template>

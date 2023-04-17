@@ -39,12 +39,11 @@ export class ServersComponent {
     console.dir(element);  
   }
 
-  onUpdateServerName(event: any){
+  onUpdateServerName(event: any) {
     // console.log(event);
     this.serverName = (<HTMLInputElement>event.target).value;
     
-    // this works too.
-    
-    this.serverName = event.target.value;
+    // this works too.    
+    // this.serverName = event.target.value;
   }
 }
