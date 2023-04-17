@@ -1,8 +1,12 @@
 <button (click)="toggleParagraphDisplay()">Display Details</button>
-<p  *ngIf="logItem < 5; else paragraphWithFormatting">{{paragraphText}}</p>
+<div  *ngIf="logItem < 5; else paragraphWithFormatting">
+	<p>{{paragraphText}}</p>
+	<p>{{arrayLogMessages.toString()}} </p>
+</div>
+
 <ng-template #paragraphWithFormatting>
+	<p>{{paragraphText}}</p>
 	<p 	
 		[ngStyle]="{backgroundColor: bgColor}"
-		[ngClass]="{myColor: textColor}">{{paragraphText}} </p>
+		[ngClass]="{myColor: logItem >= 5}">{{arrayLogMessages.toString()}} </p>
 </ng-template>
-<p>{{logItem}}</p>

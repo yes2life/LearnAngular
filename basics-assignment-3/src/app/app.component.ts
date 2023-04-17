@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
         .myColor {
           color: white;
         }
+        /* label {
+          display: block;
+          text-align: left;
+        } */
     `]
 })
 
@@ -38,6 +42,5 @@ export class AppComponent {
     this.arrayLogMessages.push(this.logItem.toString());
     // output log
     console.log('Button cliked ' + this.logItem + ' time(s). Array log: ' + this.arrayLogMessages );
-    console.log('Special formatting set. Button has been clicked ' + this.logItem + ' times.');
   }
 }
