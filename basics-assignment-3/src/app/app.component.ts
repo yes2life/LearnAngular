@@ -24,12 +24,6 @@ export class AppComponent {
     this.logItem = 0;
   }
 
-  setFormatting(){    
-    this.textColor = 'white';
-    this.bgColor= 'blue';
-    console.log('Special formatting set. Button has been clicked ' + this.logItem + ' times.');
-  }
-
   toggleParagraphDisplay(){
 
     // toggle paragraph: if blank, set to 'Secret Password = tuna'; otherwise, clear
@@ -44,9 +38,6 @@ export class AppComponent {
     this.arrayLogMessages.push(this.logItem.toString());
     // output log
     console.log('Button cliked ' + this.logItem + ' time(s). Array log: ' + this.arrayLogMessages );
-
-    if (this.logItem >= 5) {
-      this.setFormatting();
-    }
+    console.log('Special formatting set. Button has been clicked ' + this.logItem + ' times.');
   }
 }
