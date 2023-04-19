@@ -1,4 +1,4 @@
-export class Ingredients {
+export class Ingredient {
 	// // long way
 	// public name: string;
 	// public amount: number;
@@ -9,8 +9,6 @@ export class Ingredients {
 	// 	this.amount = amount;
 	// }
 
-	/**
-	 *
-	 */
+	// short cut
 	constructor(public name: string, public amount: number) {}
 }
