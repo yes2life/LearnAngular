@@ -12,7 +12,12 @@ export class RecipeListComponent  {
         'A Test Recipe',
         'This is simply a test',
         'https://p1.pxfuel.com/preview/217/260/0/zucchini-summer-squash-food-recipe-delicious-breakfast.jpg'
-      )
+      ),
+      new Recipe(
+        'A Korean Recipe',
+        'Kimchi',
+        'https://p1.pxfuel.com/preview/217/260/0/zucchini-summer-squash-food-recipe-delicious-breakfast.jpg'
+      ),
     ];
   
   constructor() {
