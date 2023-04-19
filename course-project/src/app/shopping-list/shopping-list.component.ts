@@ -9,7 +9,6 @@ export class ShoppingListComponent {
   ingredients = [];
 
   constructor() {
-
     
   }
 }
