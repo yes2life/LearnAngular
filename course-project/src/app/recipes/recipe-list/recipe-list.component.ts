@@ -21,6 +21,6 @@ export class RecipeListComponent  {
     ];
   
   constructor() {
-    // console.log(this.recipes.toString);
+    console.log(this.recipes);
   }
 }
