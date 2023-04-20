@@ -1,11 +1,18 @@
 <div class="container">
   <app-cockpit 
     (serverCreated)="onAddServerAdded($event)"
-    (blueprintCreated)="onAddBlueprintAdded($event)"
+    (bpCreated)="onAddBlueprintAdded($event)"
   ></app-cockpit>
   <hr>
   <div class="row">
     <div class="col-xs-12">
+      <!-- 
+        Binding to [srvElement] sends the serverElement value taken from the array of serverElements
+        here in app.component.ts transmits the value to the child component. srvElement is an alias for 'element'. 
+        IMPORTANT: By default, component properties are not accessible from outside of the component. 
+        IMPORTANT: The alias is set by supplying a parameter for the @Input() decorator in server-element.component.ts like so:
+          @Input('srvElement') 
+      -->
       <app-server-element 
         *ngFor="let serverElement of serverElements"
         [srvElement]="serverElement"></app-server-element>
