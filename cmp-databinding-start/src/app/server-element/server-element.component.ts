@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ServerElementComponent implements OnInit {
   // serverElements = [];
 
+  // the element variable is set to a type using an object
   // this @Input() decorator allows the element property to be accessed outside of this component
   @Input('srvElement') element: { type: string, name: string, content: string };
 
