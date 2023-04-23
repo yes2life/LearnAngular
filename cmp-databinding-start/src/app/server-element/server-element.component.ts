@@ -9,7 +9,9 @@ import {
   AfterContentChecked,
   AfterViewInit,
   AfterViewChecked,
-  OnDestroy
+  OnDestroy,
+  ViewChild,
+  ElementRef
 } from '@angular/core';
 
 @Component({
@@ -32,6 +34,7 @@ export class ServerElementComponent implements
   // this @Input([alias]) decorator allows the element property to be accessed outside of this component
   @Input('srvElement') element: { type: string, name: string, content: string };
   @Input() name: string;
+  @ViewChild('heading', { static: true}) header: ElementRef;
 
   constructor() { 
     console.log('constructor called!');
@@ -44,6 +47,7 @@ export class ServerElementComponent implements
 
   ngOnInit(): void {
     console.log('ngOnInit called!');
+    console.log('Text content: ' + this.header.nativeElement.textContent);
   }
 
   ngDoCheck(): void {
@@ -60,6 +64,7 @@ export class ServerElementComponent implements
 
   ngAfterViewInit(): void {
     console.log('ngAfterViewInit called!');
+    console.log('Text content: ' + this.header.nativeElement.textContent);
   }
 
   ngAfterViewChecked(): void {
