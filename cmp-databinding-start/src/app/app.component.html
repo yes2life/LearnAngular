@@ -6,6 +6,8 @@
   <hr>
   <div class="row">
     <div class="col-xs-12">
+      <button class="btn btn-primary" (click) = "onChangeFirst()">Change first Element</button>
+      <button class="btn btn-danger" (click) = "onDestroyFirst()">Destroy first Component</button>
       <!-- 
         Binding to [srvElement] sends the serverElement value taken from the array of serverElements
         here in app.component.ts transmits the value to the child component. srvElement is an alias for 'element'. 
@@ -15,7 +17,8 @@
       -->
       <app-server-element 
         *ngFor="let serverElement of serverElements"
-        [srvElement]="serverElement">
+        [srvElement]="serverElement"
+        [name] = "serverElement.name">
         <p>
           <strong *ngIf="serverElement.type === 'server'" style="color: red;">{{ serverElement.content }}</strong>
           <!-- the em element results in italics -->
