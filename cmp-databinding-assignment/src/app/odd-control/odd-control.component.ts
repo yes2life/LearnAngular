@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { 
+  Component,
+  Input
+} from '@angular/core';
 
 @Component({
   selector: 'app-odd-control',
@@ -6,5 +9,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./odd-control.component.css']
 })
 export class OddControlComponent {
+  @Input('odd') gameComponent = {type: '', time: 0, color: ''};
 
 }

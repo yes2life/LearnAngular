@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { 
+  Component,
+  Input 
+} from '@angular/core';
 
 @Component({
   selector: 'app-even-control',
@@ -6,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./even-control.component.css']
 })
 export class EvenControlComponent {
+  @Input('even') evenComponent: {type: string, time: number, color: string};
 
+  constructor() {
+    this.evenComponent = {type: '', time: 0, color: ''};
+  }
 }

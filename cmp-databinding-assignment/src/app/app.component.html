@@ -1,8 +1,21 @@
 <div class="container">
 
-      <app-game-control>
-        <even-control></even-control>
-        <odd-control></odd-control>
-      </app-game-control>
-
+    <app-game-control
+      (startEvent) = "onStartEvent($event)"
+    ></app-game-control>
+    <app-even-control
+      *ngFor="let evenComp of gameComponents"
+      [even]="evenComp">
+        <p #evenParagraph>
+          <strong *ngIf="evenComp.type === 'even'" style="color: red;">{{ evenComp.time }}</strong>
+        </p>    
+    </app-even-control>
+    
+    <app-odd-control
+      *ngFor="let oddComp of gameComponents"
+      [odd]="oddComp">
+      <p #oddParagraph>
+        <strong *ngIf="oddComp.type === 'odd'" style="color: blue;">{{ oddComp.time }}</strong>
+      </p>
+    </app-odd-control>
 </div>

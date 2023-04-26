@@ -17,7 +17,7 @@ export class CockpitComponent implements OnInit {
   // initialization of the instance.
   @Output('bpCreated') blueprintCreated = new EventEmitter<{serverName: string, serverContent: string}>();
   // can I create an event?
-  blue = new EventEmitter
+  blue = new EventEmitter;
   // newServerName = '';
   // newServerContent = '';
   @ViewChild('serverContentInput') serverContentInput: ElementRef;  // serverContentInput is a local reference #serverContentInput
