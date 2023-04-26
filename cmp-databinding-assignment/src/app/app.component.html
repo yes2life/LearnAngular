@@ -7,7 +7,7 @@
       *ngFor="let evenComp of gameComponents"
       [even]="evenComp">
         <p #evenParagraph>
-          <strong *ngIf="evenComp.type === 'even'" style="color: red;">{{ evenComp.time }}</strong>
+          <strong *ngIf="evenComp.type === 'even'" style="color: red;">Even - {{ evenComp.time }}</strong>
         </p>    
     </app-even-control>
     
@@ -15,7 +15,7 @@
       *ngFor="let oddComp of gameComponents"
       [odd]="oddComp">
       <p #oddParagraph>
-        <strong *ngIf="oddComp.type === 'odd'" style="color: blue;">{{ oddComp.time }}</strong>
+        <strong *ngIf="oddComp.type === 'odd'" style="color: blue;">Odd - {{ oddComp.time }}</strong>
       </p>
     </app-odd-control>
 </div>
